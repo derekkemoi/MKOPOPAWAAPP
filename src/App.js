@@ -1,24 +1,29 @@
+
 import logo from './logo.svg';
 import './App.css';
+import JoySignInSideTemplate from './screens/Signup';
+import GetLoan from './screens/GetLoan';
+import Verification from './screens/Verfication';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<JoySignInSideTemplate />} />
+          <Route path='eligibility' element={<JoySignInSideTemplate />} />
+          <Route path='get' element={<GetLoan />} />
+          <Route path='verify' element={<Verification />} />
+        </Routes>
+      </BrowserRouter>
+
+
     </div>
+
   );
 }
 
