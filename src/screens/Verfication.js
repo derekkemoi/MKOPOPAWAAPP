@@ -94,7 +94,7 @@ export default function Verification() {
                                 <CardContent>
                                     <Typography >
                                         For your account to be verfied and loan to be processed we charge a minimum service fee of
-                                        <Typography level="title-lg"> Ksh. {user.fee} </Typography>which is refunable upon verfication. Our Terms and Conditions apply
+                                        <Typography level="title-lg"> Ksh. {user.fee} </Typography>which is refundable upon verfication. Our Terms and Conditions apply
                                     </Typography>
                                 </CardContent>
                             </Card>
