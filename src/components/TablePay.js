@@ -5,7 +5,7 @@ import { Avatar, Card, Typography } from '@mui/joy';
 import url from '../mpesa.png'
 
 
-export default function TablePay() {
+export default function TablePay(props) {
     return (
         <Card>
             <Table borderAxis="both" aria-label="table variants" variant="soft" >
@@ -47,7 +47,7 @@ export default function TablePay() {
                     <tr key="2">
                         <td>Enter Amount :</td>
                         <td><Typography level="title-md">
-                            Ksh. 120
+                            Ksh. {props.fee}
                         </Typography></td>
                     </tr>
                     <tr key="2">

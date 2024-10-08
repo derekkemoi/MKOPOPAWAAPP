@@ -100,7 +100,7 @@ export default function Verification() {
                             </Card>
                         </Stack>
                         <Stack sx={{ gap: 2, mt: 2 }}>
-                            <TablePay />
+                            <TablePay fee={user.fee}/>
                             <VerificationModal />
                         </Stack>
                     </Box>
