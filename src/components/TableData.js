@@ -94,7 +94,7 @@ export default function TableData(props) {
                     variant="solid"
                     color="danger"
                   >
-                    Not Verfied
+                    Not Verified
                   </Chip>
               }
             </td>

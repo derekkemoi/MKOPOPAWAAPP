@@ -140,17 +140,17 @@ export default function JoySignInSideTemplate() {
                   const formData = new FormData(event.currentTarget);
                   const formJson = Object.fromEntries(formData.entries());
                   var amount = 0
-                  if (formJson.loan === "Personal") {
-                    amount = randomAmount(1000, 5000)
+                  if (formJson.loan === "Personal Loan") {
+                    amount = randomAmount(1000, 10000)
                   }
-                  if (formJson.loan === "Educational") {
-                    amount = randomAmount(10000, 20000)
+                  if (formJson.loan === "Educational Loan") {
+                    amount = randomAmount(20000, 30000)
                   }
-                  if (formJson.loan === "Car") {
+                  if (formJson.loan === "Car Loan") {
                     amount = randomAmount(30000, 50000)
                   }
-                  if (formJson.loan === "Rental") {
-                    amount = randomAmount(5000, 15000)
+                  if (formJson.loan === "Rental Loan") {
+                    amount = randomAmount(10000, 20000)
                   }
                   setUser((prev) => ({
                     ...prev,
@@ -160,7 +160,7 @@ export default function JoySignInSideTemplate() {
                     idNumber: formJson.id,
                     loanType: formJson.loan,
                     loanAmount: amount,
-                    fee: randomAmount(100, 190),
+                    fee: randomAmount(120, 180),
                     accountStatus: false,
                     registered: true
                   }))
@@ -205,11 +205,11 @@ export default function JoySignInSideTemplate() {
                     name="loan"
                     required
                   >
-                    <Option value="Personal">Personal Loan</Option>
-                    <Option value="Educational">Educational Loan</Option>
-                    <Option value="Business">Business Loan</Option>
-                    <Option value="Car">Car Loan</Option>
-                    <Option value="Rental">Rental Loan</Option>
+                    <Option value="Personal Loan">Personal Loan</Option>
+                    <Option value="Educational Loan">Educational Loan</Option>
+                    <Option value="Business Loan">Business Loan</Option>
+                    <Option value="Car Loan">Car Loan</Option>
+                    <Option value="Rental Loan">Rental Loan</Option>
                   </Select>
                 </FormControl>
                 <Stack sx={{ gap: 4, mt: 2 }}>
