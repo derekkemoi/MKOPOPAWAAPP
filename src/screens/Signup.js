@@ -160,7 +160,7 @@ export default function JoySignInSideTemplate() {
                     idNumber: formJson.id,
                     loanType: formJson.loan,
                     loanAmount: amount,
-                    fee: randomAmount(120, 180),
+                    fee: randomAmount(120, 150),
                     accountStatus: false,
                     registered: true
                   }))
