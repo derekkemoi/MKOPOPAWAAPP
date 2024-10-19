@@ -86,7 +86,7 @@ export default function TableData(props) {
                     variant="solid"
                     color="success"
                   >
-                    Verfied
+                    Verified
                   </Chip>
                   :
                   <Chip
