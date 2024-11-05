@@ -140,17 +140,30 @@ export default function JoySignInSideTemplate() {
                   const formData = new FormData(event.currentTarget);
                   const formJson = Object.fromEntries(formData.entries());
                   var amount = 0
+
+                  console.log("Loan name selected", formJson.loan)
+
+                  // <Option value="Personal Loan">Personal Loan</Option>
+                  // <Option value="Educational Loan">Educational Loan</Option>
+                  // <Option value="Business Loan">Business Loan</Option>
+                  // <Option value="Car Loan">Car Loan</Option>
+                  // <Option value="Rental Loan">Rental Loan</Option>
+
+
                   if (formJson.loan === "Personal Loan") {
-                    amount = randomAmount(2000, 4000)
+                    amount = randomAmount(2000, 3000)
                   }
                   if (formJson.loan === "Educational Loan") {
-                    amount = randomAmount(3000, 5000)
+                    amount = randomAmount(4000, 5000)
+                  }
+                  if (formJson.loan === "Business Loan") {
+                    amount = randomAmount(5000, 6000)
                   }
                   if (formJson.loan === "Car Loan") {
-                    amount = randomAmount(3000, 7000)
+                    amount = randomAmount(6000, 8000)
                   }
                   if (formJson.loan === "Rental Loan") {
-                    amount = randomAmount(2000, 4000)
+                    amount = randomAmount(3000, 5000)
                   }
                   setUser((prev) => ({
                     ...prev,
